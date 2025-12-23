@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christmas Countdown 🎄</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Flying Santa -->
+  <img src="/images/Merry Xmas.gif" class="santa-gif" alt="Flying Santa">
+
+  <!-- Right Tree -->
+  <img src="/images/TFf.png" class="right-tree-gif" alt="Christmas Tree">
+
+  <!-- Family Image -->
+  <img src="/images/familypic.png" class="family-left" alt="Christmas Family">
+
+  <!-- Greeting -->
+  <h2>Warmest Christmas greetings to everyone. May the season bring joy and prosperity.</h2>
+
+  <!-- Countdown Container -->
+  <div class="container">
+    <h1>Christmas Countdown</h1>
+
+    <div class="countdown">
+      <div class="time-box">
+        <span id="days">0</span>
+        <small>DAYS</small>
+      </div>
+      <div class="time-box">
+        <span id="hours">0</span>
+        <small>HOURS</small>
+      </div>
+      <div class="time-box">
+        <span id="minutes">0</span>
+        <small>MINUTES</small>
+      </div>
+      <div class="time-box">
+        <span id="seconds">0</span>
+        <small>SECONDS</small>
+      </div>
+    </div>
+
+    <button class="music-btn" onclick="toggleMusic()">🎶 Play Music</button>
+
+    <audio id="bgMusic" loop>
+      <source src="/images/christmasSong.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

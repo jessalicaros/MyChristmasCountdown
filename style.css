@@ -1,0 +1,158 @@
+/* ====== GLOBAL STYLES ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url("/images/bg2.png") no-repeat center center / cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* ====== CONTAINER ====== */
+.container {
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+/* ====== GREETING ====== */
+h2 {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #fff8e7;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* ====== COUNTDOWN ====== */
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.time-box {
+  background: rgba(255,255,255,0.15);
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.time-box span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.time-box small {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* ====== MUSIC BUTTON ====== */
+.music-btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #fff;
+  color: #b31217;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.music-btn:hover {
+  background: #ffeaea;
+}
+
+/* ====== IMAGES ====== */
+.right-tree-gif {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 350px;
+  z-index: 5;
+  pointer-events: none;
+  animation: treeMove 6s ease-in-out infinite;
+}
+
+.family-left {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 110vh;
+  z-index: 1;
+}
+
+.santa-gif {
+  position: fixed;
+  top: 5%;
+  right: -400px;
+  width: 250px;
+  z-index: 10;
+  pointer-events: none;
+  animation: santaFly 15s linear infinite, santaBob 3s ease-in-out infinite alternate;
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes treeMove {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes santaFly {
+  from { right: -400px; }
+  to { right: 110%; }
+}
+
+@keyframes santaBob {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* ====== SNOW ====== */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: #fff;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh); }
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .family-left {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  .right-tree-gif { width: 180px; }
+  .santa-gif { width: 160px; }
+  .time-box span { font-size: 1.5rem; }
+}
